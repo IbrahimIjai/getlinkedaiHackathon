@@ -8,4 +8,6 @@ RUN bun install
 
 COPY . .
 
-CMD [ "next", "dev" ]
+ENV PORT 3001
+
+CMD ["next", "dev", "-H", "0.0.0.0"]
