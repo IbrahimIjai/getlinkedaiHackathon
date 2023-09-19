@@ -28,7 +28,7 @@ export default function Home() {
       <div className="h-8 p-3  text-center flex items-center justify-center bg-border">
         border
       </div>
-      <div className="h-8 p-3  text-center flex items-center justify-center bg-input">
+      <div className="h-8 p-3 text-center flex items-center justify-center bg-input">
         input
       </div>
       <div className="h-8 p-3  text-center flex items-center justify-center bg-ring">
