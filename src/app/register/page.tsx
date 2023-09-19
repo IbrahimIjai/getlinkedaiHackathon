@@ -17,17 +17,19 @@ import {
 } from "@/components/shadcn/Select";
 import { Checkbox } from "@/components/shadcn/Checkbox";
 import { Button } from "@/components/shadcn/Button";
+import ConfirmationModal from "./ConfirmationModal";
 
 export default function Register() {
   return (
-    <main className="flareBg bg-secondary">
+    <main className="flareBg bg-secondary relative w-full">
+      <ConfirmationModal />
       <StarsBackground />
-      <section className="p-2 !pb-6 md:flex">
+      <section className="p-6 lg:flex">
         <aside className="relative max-w-[500px] flex flex-col gap-2 m-auto">
           <Text text="Register" type="h1" className="md:hidden" />
           <Image src={OnboardingPerson} alt="Onboarding Person icon" />
         </aside>
-        <aside className="flex flex-col gap-6 md:flex-1 shadow-[0px_4px_4px_#00000040] p-8 rounded-xl ssm:max-w-[430px] ssm:m-auto">
+        <aside className="flex flex-col gap-6 md:flex-1 shadow-[0px_4px_4px_#00000040] p-8 rounded-xl ssm:max-lg:max-w-[430px] ssm:m-auto">
           <Text text="Register" type="h1" className="hidden md:block" />
           <div className="flex gap-2">
             <Text text="Be part of this movement!" isWhite />
@@ -37,18 +39,19 @@ export default function Register() {
             </div>
           </div>
           <Text text="Create your Account" isWhite type="h1" />
-          <div className="inputWithLabel flex flex-col gap-6">
-            {InputComponentData.map((input) => (
+          <div className="inputWithLabel flex flex-col gap-6 lg:flex-row lg:flex-wrap">
+            {InputComponentData.map((input, i) => (
               <InputWithLabel
                 key={input.id}
                 id={input.id}
                 placeholder={input.placeholder}
                 label={input.label}
                 type={input.type}
+                index={i}
               />
             ))}
           </div>
-          <div className="selectWithLabel flex flex-col gap-4 w-full min-[430px]:flex-row">
+          <div className="selectWithLabel flex flex-col gap-4 w-full min-[430px]:flex-row lg:gap-6">
             {SelectComponentData.map((select, i) => (
               <SelectWithLabel
                 key={select.id}
@@ -81,11 +84,18 @@ interface InputWithLabelProps {
   id: string;
   placeholder: string;
   label: string;
+  index: number;
   type?: string;
 }
-function InputWithLabel({ id, placeholder, label, type }: InputWithLabelProps) {
+function InputWithLabel({
+  id,
+  placeholder,
+  label,
+  type,
+  index,
+}: InputWithLabelProps) {
   return (
-    <div className="grid w-full max-w-sm items-center gap-1.5">
+    <div className="grid w-full max-w-sm items-center gap-1.5 lg:w-[calc(50%-20px)]">
       <Label htmlFor={id} className="text-white">
         {label}
       </Label>
@@ -101,7 +111,6 @@ function InputWithLabel({ id, placeholder, label, type }: InputWithLabelProps) {
 
 interface SelectWithLabelProps extends InputWithLabelProps {
   options: string[];
-  index: number;
 }
 function SelectWithLabel({
   options,
@@ -111,16 +120,18 @@ function SelectWithLabel({
   index,
 }: SelectWithLabelProps) {
   return (
-    <div className="grid w-full max-w-sm items-center gap-1.5">
+    <div
+      className={`grid w-full max-w-sm items-center gap-1.5 lg:w-[calc(50%-20px)] ${
+        index === 0
+          ? "min-[430px]:max-md:w-[65%]"
+          : "min-[430px]:max-md:w-[35%]"
+      }`}
+    >
       <Label htmlFor={id} className="text-white">
         {label}
       </Label>
       <Select>
-        <SelectTrigger
-          className={`w-full text-white border-solid border border-white rounded px-6 py-6 ${
-            index === 0 ? "flex-[2_2_0%]" : "flex-1"
-          }`}
-        >
+        <SelectTrigger className="w-full text-white border-solid border border-white rounded px-6 py-6">
           <SelectValue
             placeholder={placeholder}
             className="placeholder:text-white"
