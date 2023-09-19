@@ -8,7 +8,7 @@ import { Textarea } from "@/components/shadcn/Textarea";
 import Link from "next/link";
 
 const InputClasses =
-  "border-solid border border-white rounded px-6 py-4 text-white placeholder-white";
+  "border-solid border border-white rounded px-6 py-4 text-white placeholder:text-white";
 
 export default function ContactPage() {
   return (
