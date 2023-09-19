@@ -1,4 +1,4 @@
-const { fontFamily } = require("tailwindcss/defaultTheme")
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -6,8 +6,17 @@ module.exports = {
   content: [
     "src/**/*.{ts,tsx}",
     "app/**/*.{ts,tsx}",
-   "components/**/*.{ts,tsx}"],
+    "components/**/*.{ts,tsx}",
+  ],
   theme: {
+    screens: {
+      ssm: "400px",
+      sm: "640px",
+      md: "800px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+    },
     container: {
       center: true,
       padding: "2rem",
@@ -76,4 +85,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};

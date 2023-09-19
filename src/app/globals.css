@@ -7,6 +7,7 @@
   /* color config for getlinkedai ---hsl values*/
   :root {
     --background: 256 48% 11%;
+    --contactpagebackground: 256 50% 10%;
     --foreground: 0 0% 95%;
 
     --card: 24 9.8% 10%;
@@ -40,3 +41,39 @@
 body {
   background-color: var(--background);
 }
+.flareBg {
+  background-image: url("/flare.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: auto;
+  background-origin: padding-box;
+}
+.gradient {
+  background: linear-gradient(
+    -45deg,
+    rgb(144, 58, 255) 0%,
+    rgb(212, 52, 254) 56.42%,
+    rgb(255, 37.9, 184.51) 99.99%,
+    rgb(254, 52, 185.32) 100%
+  );
+  /* transition: background 5000ms ease-in-out; */
+}
+.border-gradient {
+  border-image: linear-gradient(
+    -45deg,
+    rgb(144, 58, 255) 0%,
+    rgb(212, 52, 254) 56.42%,
+    rgb(255, 37.9, 184.51) 99.99%,
+    rgb(254, 52, 185.32) 100%
+  );
+  border-image-slice: 1;
+}
+/* .gradient:hover {
+  background: linear-gradient(
+    45deg,
+    rgb(144, 58, 255) 0%,
+    rgb(212, 52, 254) 56.42%,
+    rgb(255, 37.9, 184.51) 99.99%,
+    rgb(254, 52, 185.32) 100%
+  );
+} */

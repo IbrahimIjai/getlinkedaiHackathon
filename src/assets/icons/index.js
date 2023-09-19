@@ -1,0 +1,40 @@
+import * as React from "react";
+const PreviousArrow = (props) => (
+  <svg
+    width={23}
+    height={23}
+    viewBox="0 0 23 23"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <g id="Group 1">
+      <circle
+        id="Ellipse 4"
+        cx={11.5}
+        cy={11.5}
+        r={11}
+        stroke="url(#paint0_linear_177_298)"
+      />
+      <path
+        id="Vector 5"
+        d="M12.2666 9.20001L9.19995 12.2667L12.2666 14.5667"
+        stroke="white"
+      />
+    </g>
+    <defs>
+      <linearGradient
+        id="paint0_linear_177_298"
+        x1={11.5}
+        y1={0}
+        x2={11.5}
+        y2={23}
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stopColor="#903AFF" />
+        <stop offset={1} stopColor="#FF26B9" />
+      </linearGradient>
+    </defs>
+  </svg>
+);
+export { PreviousArrow };
