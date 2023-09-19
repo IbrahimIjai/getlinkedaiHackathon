@@ -12,7 +12,7 @@ const InputClasses =
 
 export default function ContactPage() {
   return (
-    <main className="flareBg bg-secondary relative flex flex-col  ssm:items-center">
+    <main className="flareBg  relative flex flex-col  ssm:items-center">
       <StarsBackground />
       <section className="flex px-8 py-12 flex-col md:flex-row z-4 relative ssm:max-w-md md:max-w-full md:w-full md:items-center">
         <div className="w-full md:hidden">
