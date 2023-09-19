@@ -1,9 +1,10 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-
+import { Providers } from "./providers";
 const inter = Inter({ subsets: ["latin"] });
-
+import Navbar from "@/components/Layout/Navbar";
+import Footer from "@/components/Layout/Footer";
 export const metadata: Metadata = {
   title: "GetLinkedTech Hackathon 2023",
   description:
@@ -17,27 +18,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Navbar />
-        {children}
+      <body className={`${inter.className} bg-background text-white`}>
+        <Providers>
+          <Navbar />
+          {children}
+          <Footer/>
+        </Providers>
       </body>
     </html>
-  );
-}
-
-function Navbar() {
-  return (
-    <nav className="flex flex-col justify-between px-24 py-5 line navbar">
-      <div>
-        get<span className="linked">linked</span>
-      </div>
-      <ul className="ul">
-        <li>Timeline</li>
-        <li>Overview</li>
-        <li>FAQ</li>
-        <li>Contact</li>
-        <li className="special">Register</li>
-      </ul>
-    </nav>
   );
 }
