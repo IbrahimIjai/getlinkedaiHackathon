@@ -5,7 +5,7 @@ import Text from "@/components/Text";
 import Image from "next/image";
 export default function Register() {
   return (
-    <main className="flareBg bg-secondary">
+    <main className="flareBg relative">
       <StarsBackground />
       <section>
         <aside className="relative">

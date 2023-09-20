@@ -13,7 +13,7 @@ export default function StarsBackground() {
     { star: star_purple, style: { bottom: "20%", left: "8%" } },
   ];
   return (
-    <div className="absolute top-0 left-0 w-full h-full">
+    <div className="absolute top-0 left-0 w-full h-full z-0">
       {_stars.map((star, i) => (
         <Image
           height={15}

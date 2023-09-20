@@ -7,7 +7,7 @@ import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/classnames";
 import { Button } from "@/components/shadcn/Button";
 import { Sheet, SheetContent, SheetTrigger,SheetClose } from "@/components/shadcn/Drawer";
-import { Close, Menu } from "@/assets";
+import { Close, Menu } from "@/assets/icons";
 
 export function MobileNav() {
   const segment = useSelectedLayoutSegment();
@@ -16,21 +16,11 @@ export function MobileNav() {
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild>
-        <Button
-          variant="ghost"
-          className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 lg:hidden"
-        >
           <Menu />
-        </Button>
       </SheetTrigger>
       <SheetContent side="top" className="w-full">
-        <SheetClose className="w-full flex justify-end">
-          <Button
-            variant="ghost"
-            className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 lg:hidden"
-          >
+        <SheetClose className="border-none w-full flex justify-end">
             <Close />
-          </Button>
         </SheetClose>
         <div className="flex flex-col items-start gap-6">
           {siteConfig.Navigations.map(({ title, href }) => {
@@ -44,7 +34,7 @@ export function MobileNav() {
               </Link>
             );
           })}
-          <Button>
+          <Button variant="gradient">
             <Link href="/register">Register</Link>
           </Button>
         </div>

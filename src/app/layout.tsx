@@ -20,9 +20,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-background text-white`}>
         <Providers>
-          <Navbar />
-          {children}
-          <Footer/>
+          <div className="relative flex min-h-screen flex-col">
+            <Navbar />
+            {children}
+            {/* <Footer/> */}
+          </div>
         </Providers>
       </body>
     </html>

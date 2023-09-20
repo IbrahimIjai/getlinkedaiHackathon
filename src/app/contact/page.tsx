@@ -55,7 +55,7 @@ export default function ContactPage() {
           <Input placeholder="Topic" type="text" className={InputClasses} />
           <Input placeholder="Email" type="email" className={InputClasses} />
           <Textarea placeholder="Message" className={InputClasses} />
-          <Button className="m-auto">Submit</Button>
+          <Button variant="gradient" className="m-auto">Submit</Button>
         </aside>
         <aside className="flex flex-col items-center md:hidden">
           <Text text="Share on" />

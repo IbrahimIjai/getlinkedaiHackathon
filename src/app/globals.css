@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  /* hsla(0, 0%, 100%, 0.18) */
   /* color config for getlinkedai ---hsl values*/
   :root {
     --background: 256 48% 11%;
@@ -38,9 +37,9 @@
   }
 }
 
-body {
+/* body {
   background-color: var(--background);
-}
+} */
 .flareBg {
   background-image: url("/flare.png");
   background-repeat: no-repeat;

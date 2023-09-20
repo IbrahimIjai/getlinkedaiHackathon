@@ -1,5 +1,5 @@
 
-import { PhoneIcon, LocationIcon, InstagramIcon, LinkedlnIcon, TwitterIcon, FacebookIcon } from "@/assets";
+import { PhoneIcon, LocationIcon, InstagramIcon, LinkedlnIcon, TwitterIcon, FacebookIcon } from "@/assets/icons";
 
 const links = {
   instagram: "https://instagram.com/getlinkedai",

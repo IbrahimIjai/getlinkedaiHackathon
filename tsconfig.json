@@ -28,6 +28,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/assets/icons/index.js"
-  ],
+, "src/hooks/useCountdownTimer.js"  ],
   "exclude": ["node_modules"]
 }

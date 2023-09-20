@@ -1,11 +1,11 @@
-import { Instagram, Facebook, X, LinkedIn } from "@/assets/svg/Socials";
+import { InstagramIcon, FacebookIcon, TwitterIcon, LinkedlnIcon } from "@/assets/icons";
 export default function SocialsLinks() {
   return (
     <div className="flex gap-3 items-center mt-2">
-      <Instagram width="22px" height="22px" />
-      <X width="20px" height="20px" />
-      <Facebook width="20px" height="20px" />
-      <LinkedIn width="25px" height="25px" />
+      <InstagramIcon width="22px" height="22px" />
+      <TwitterIcon width="20px" height="20px" />
+      <FacebookIcon width="20px" height="20px" />
+      <LinkedlnIcon width="25px" height="25px" />
     </div>
   );
 }

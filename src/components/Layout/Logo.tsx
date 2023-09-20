@@ -1,4 +1,4 @@
-import { Logo as LogoDesktop, LogoMobile } from '@/assets'
+import { Logo as LogoDesktop, LogoMobile } from '@/assets/icons'
 import React from 'react'
 
 export default function Logo() {
