@@ -2,6 +2,7 @@ import Criteria from "@/views/LandingPage/Criteria";
 import HeroPage from "@/views/LandingPage/HeroPage";
 import Introduction from "@/views/LandingPage/Introduction";
 import Rules from "@/views/LandingPage/Rules";
+import Faq from "@/views/LandingPage/Faq";
 
 export default function HomePage() {
   return (
@@ -10,6 +11,7 @@ export default function HomePage() {
       <Introduction />
       <Rules />
       <Criteria />
+      <Faq/>
       {/* 
         <HeroPage />
         <Line /> 

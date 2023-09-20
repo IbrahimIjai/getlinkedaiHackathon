@@ -1,3 +1,3 @@
 
 
-export const useTimerDemoEventDate = new Date()+5hours
+// export const useTimerDemoEventDate = new Date()+5hours

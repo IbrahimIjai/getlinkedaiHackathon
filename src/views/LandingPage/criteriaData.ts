@@ -1,4 +1,4 @@
-export const criteriaData = [
+export const criteriaData: {title:string; text:string;}[] = [
   {
     title: "Innovation and Creativity: ",
     text: "Evaluate the uniqueness and creativity of the solution. Consider whether it addresses a real-world problem in a novel way or introduces innovative features.",

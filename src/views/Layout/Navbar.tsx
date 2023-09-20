@@ -8,7 +8,7 @@ import { Button } from "@/components/shadcn/Button";
 
 export default function Navbar() {
   return (
-    <nav className="sticky top-0 z-50 flex items-center justify-between w-full py-6 px-10 border-b border-border/20 ">
+    <nav className="sticky bg-background top-0 z-50 flex items-center justify-between w-full py-6 px-10 border-b border-border/20 ">
       <Logo />
       <div className="flex items-center gap-28">
         <div className="hidden lg:flex items-center justify-between">
