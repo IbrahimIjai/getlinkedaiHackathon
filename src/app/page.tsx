@@ -1,9 +1,9 @@
-import Home from "@/views/LandingPage/HeroPage";
+import HeroPage from "@/views/LandingPage/HeroPage";
 
 export default function HomePage() {
   return (
     <main>
-      <Home />
+      <HeroPage />
       {/* 
         <HeroPage />
         <Line /> 
