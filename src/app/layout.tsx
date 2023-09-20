@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Providers } from "./providers";
 const inter = Inter({ subsets: ["latin"] });
-import Navbar from "@/components/Layout/Navbar";
-import Footer from "@/components/Layout/Footer";
+import Navbar from "@/views/Layout/Navbar";
+import Footer from "@/views/Layout/Footer";
 export const metadata: Metadata = {
   title: "GetLinkedTech Hackathon 2023",
   description:

@@ -1,4 +1,4 @@
-import Home from "@/Modules/Home";
+import Home from "@/views/LandingPage/HeroPage";
 
 export default function HomePage() {
   return (

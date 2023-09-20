@@ -1,5 +1,4 @@
 import React from "react";
-import Imagecluster from "./components/Imagecluster";
 import { Button } from "@/components/shadcn/Button";
 import { Herosunderline, HerosHook } from "@/assets/icons";
 export default function Home() {
@@ -31,7 +30,6 @@ export default function Home() {
             <Herosunderline />
           </div>
         </div>
-        <Imagecluster />
       </div>
     </div>
   );
