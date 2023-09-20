@@ -1,9 +1,15 @@
+import Criteria from "@/views/LandingPage/Criteria";
 import HeroPage from "@/views/LandingPage/HeroPage";
+import Introduction from "@/views/LandingPage/Introduction";
+import Rules from "@/views/LandingPage/Rules";
 
 export default function HomePage() {
   return (
     <main>
       <HeroPage />
+      <Introduction />
+      <Rules />
+      <Criteria />
       {/* 
         <HeroPage />
         <Line /> 
