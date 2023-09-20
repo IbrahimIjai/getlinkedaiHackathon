@@ -1,10 +1,5 @@
-
-
-
-
-
-import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
-import { FC, ReactNode } from 'react'
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+import { FC, ReactNode } from "react";
 // const queryClientConfig = {
 //     defaultOptions: {
 //       queries: {
@@ -12,12 +7,14 @@ import { FC, ReactNode } from 'react'
 //       },
 //     },
 //   }
-export const TanstackQueryProvider: FC<{ children: ReactNode }> = ({ children }) => {
-    const queryClient = new QueryClient()
+export const TanstackQueryProvider: FC<{ children: ReactNode }> = ({
+  children,
+}) => {
+  const queryClient = new QueryClient();
   return (
     <QueryClientProvider client={queryClient}>
       {children}
       {/* <ReactQueryDevtools initialIsOpen={false} /> */}
     </QueryClientProvider>
-  )
-}
+  );
+};

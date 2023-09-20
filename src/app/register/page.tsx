@@ -72,7 +72,9 @@ export default function Register() {
               I agreed with the event terms and conditions and privacy policy
             </label>
           </div>
-          <Button className="m-auto">Submit</Button>
+          <div className="m-auto sm:w-full flex items-center">
+            <ConfirmationModal />
+          </div>
         </aside>
       </section>
     </main>

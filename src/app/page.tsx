@@ -3,7 +3,7 @@ import Home from "@/Modules/Home";
 export default function HomePage() {
   return (
     <main>
-      <Home/>
+      <Home />
     </main>
     // <main className="flex w-full h-screen text-sm items-center text-red-400">
     //   <div className="h-8 p-3 text-center flex items-center justify-center bg-primary">
