@@ -1,11 +1,11 @@
 import React from "react";
 import Logo from "./Logo";
-import { Button } from "../shadcn/Button";
-
 import { siteConfig } from "@/config/site";
 import Link from "next/link";
 import { Menu } from "@/assets/icons";
 import { MobileNav } from "./MobileMenu";
+import { Button } from "@/components/shadcn/Button";
+
 export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 flex items-center justify-between w-full py-6 px-10 border-b border-border/20 ">
@@ -24,7 +24,9 @@ export default function Navbar() {
             );
           })}
         </div>
-        <Button variant="gradient" className="hidden lg:inline-flex">Register</Button>
+        <Button variant="gradient" className="hidden lg:inline-flex">
+          Register
+        </Button>
         <div className="lg:hidden">
           <MobileNav />
         </div>

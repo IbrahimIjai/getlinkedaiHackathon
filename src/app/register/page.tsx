@@ -16,7 +16,6 @@ import {
   SelectValue,
 } from "@/components/shadcn/Select";
 import { Checkbox } from "@/components/shadcn/Checkbox";
-import { Button } from "@/components/shadcn/Button";
 import ConfirmationModal from "./ConfirmationModal";
 
 export default function Register() {
