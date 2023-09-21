@@ -26,12 +26,13 @@ export default function Prizes() {
           <Image src={prize_small} alt="Prize picture" />
         </div>
       )}
-
-        <div>
-            <Image className="hidden lg:inline" src={prize_big} alt="Prize picture"/>
-            
-        </div>
-
+      <div>
+        <Image
+          className="hidden lg:inline"
+          src={prize_big}
+          alt="Prize picture"
+        />
+      </div>
     </div>
   );
 }
