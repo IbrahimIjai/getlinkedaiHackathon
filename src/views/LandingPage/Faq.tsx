@@ -10,15 +10,21 @@ export default function Faq() {
   const isDesktop = useMediaQuery("(min-width:1024px)");
 
   return (
-    <section className="grid grid-rows-2 lg:grid-cols-2 gap-2 lg:gap-8 px-[2.5rem] lg:px-[12rem] py-[7rem] lg:py-[8rem] w-full">
+    <section className="flex flex-col md:flex-row gap-4 lg:gap-8 p-8 w-full">
       <FaqAccordion />
-      <div className="flex items-center justify-center w-full h-full">
-        {isDesktop ? (
-          <Image src={FaqBigImg} alt="placeHolder image for Faq" />
-        ) : (
-          <Image src={FaqSmImg} alt="placeHolder image for Faq" />
-        )}
-      </div>
+      {isDesktop ? (
+        <Image
+          src={FaqBigImg}
+          alt="placeHolder image for Faq"
+          className="m-auto"
+        />
+      ) : (
+        <Image
+          src={FaqSmImg}
+          alt="placeHolder image for Faq"
+          className="m-auto"
+        />
+      )}
     </section>
   );
 }
