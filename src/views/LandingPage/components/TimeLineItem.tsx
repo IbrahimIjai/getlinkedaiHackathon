@@ -20,11 +20,11 @@ export default function TimeLineItem({ timelineIndex, unixTimestamp }: props) {
     <>
       {isDesktop ? (
         <div
-          className={`w-full my-6 flex items-end ${
+          className={`w-full my-6 lg:my-0 flex items-end ${
             timelineIndex % 2 == 0 ? "flex-row-reverse text-left" : "text-right"
           }`}
         >
-          <div className="w-[42%] hidden lg:inline">
+          <div className="w-[42%] hidden lg:inline -mb-8">
             <Text type="h3" text="Hackathon Announcement" />
             <Text
               type="p"
@@ -34,9 +34,9 @@ export default function TimeLineItem({ timelineIndex, unixTimestamp }: props) {
           </div>
 
           <div className="w-[16%] flex flex-col items-center justify-center gap-3">
-            <TimeLineSeperator />
+            <TimeLineSeperator style={{ height: "100px" }} />
             <span className="h-12 w-12 rounded-full gradient flex justify-center items-center">
-              {timelineIndex}
+              <Text text={timelineIndex.toString()} isWhite />
             </span>
           </div>
 
@@ -51,9 +51,11 @@ export default function TimeLineItem({ timelineIndex, unixTimestamp }: props) {
       ) : (
         <div className="flex gap-2 h-full my-2">
           <div className="flex flex-col items-center justify-center gap-2">
-            <TimeLineSeperatorMobile />
+            {/* <TimeLineSeperatorMobile /> */}
+            <TimeLineSeperator style={{ height: "80px" }} />
             <span className="h-5 w-5 text-[5px] rounded-full gradient flex justify-center items-center">
-              {timelineIndex}
+              <Text text={timelineIndex.toString()} isWhite />
+              {/* {timelineIndex} */}
             </span>
           </div>
           <div className="flex flex-col justify-between py-4">

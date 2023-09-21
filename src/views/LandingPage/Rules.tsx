@@ -8,7 +8,7 @@ export default function Rules() {
       <Image
         src={ReadRules}
         alt="Girl reading rules"
-        className="max-w-md m-auto md:order-1"
+        className="m-auto md:order-1"
       />
       <aside className="flex flex-col items-center md:items-start">
         <Text text="Rules and " type="h3" isWhite />
