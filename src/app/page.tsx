@@ -3,7 +3,7 @@ import HeroPage from "@/views/LandingPage/HeroPage";
 import Introduction from "@/views/LandingPage/Introduction";
 import Rules from "@/views/LandingPage/Rules";
 import Faq from "@/views/LandingPage/Faq";
-
+import TimeLine from "@/views/LandingPage/TimeLine";
 export default function HomePage() {
   return (
     <main>
@@ -12,6 +12,7 @@ export default function HomePage() {
       <Rules />
       <Criteria />
       <Faq/>
+      <TimeLine/>
       {/* 
         <HeroPage />
         <Line /> 
