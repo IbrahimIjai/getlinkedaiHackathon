@@ -41,7 +41,7 @@ function H3({ text, isWhite, className }: Props) {
 function P({ text, isWhite, className }: Props) {
   return (
     <p
-      className={`text-base font-bold ${isWhite ? "text-white" : "text-primary"}
+      className={`text-base ${isWhite ? "text-white" : "text-primary"}
       ${className ? className : ""}
       `}
     >
