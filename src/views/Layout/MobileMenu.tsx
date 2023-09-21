@@ -6,7 +6,12 @@ import { useSelectedLayoutSegment } from "next/navigation";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/classnames";
 import { Button } from "@/components/shadcn/Button";
-import { Sheet, SheetContent, SheetTrigger,SheetClose } from "@/components/shadcn/Drawer";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetClose,
+} from "@/components/shadcn/Drawer";
 import { Close, Menu } from "@/assets/icons";
 
 export function MobileNav() {
@@ -16,11 +21,11 @@ export function MobileNav() {
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild>
-          <Menu />
+        <Menu />
       </SheetTrigger>
       <SheetContent side="top" className="w-full">
         <SheetClose className="border-none w-full flex justify-end">
-            <Close />
+          <Close />
         </SheetClose>
         <div className="flex flex-col items-start gap-6">
           {siteConfig.Navigations.map(({ title, href }) => {
