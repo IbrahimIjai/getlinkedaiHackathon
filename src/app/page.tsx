@@ -4,6 +4,7 @@ import Introduction from "@/views/LandingPage/Introduction";
 import Rules from "@/views/LandingPage/Rules";
 import Faq from "@/views/LandingPage/Faq";
 import TimeLine from "@/views/LandingPage/TimeLine";
+import Prizes from "@/views/LandingPage/Prizes";
 export default function HomePage() {
   return (
     <main>
@@ -13,6 +14,7 @@ export default function HomePage() {
       <Criteria />
       <Faq/>
       <TimeLine/>
+      <Prizes/>
       {/* 
         <HeroPage />
         <Line /> 

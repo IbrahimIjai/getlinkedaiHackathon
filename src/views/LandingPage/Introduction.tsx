@@ -1,6 +1,6 @@
 import Image from "next/image";
 import BigIdea from "./images/BigIdea.png";
-import { Arrow } from "./svg";
+import { Arrow } from "./utils/svg";
 import Text from "@/components/Text";
 
 export default function Introduction() {

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Judge from "./images/Judge.png";
 import Text from "@/components/Text";
-import { criteriaData } from "./criteriaData";
+import { criteriaData } from "./utils/criteriaData";
 import { Button } from "@/components/shadcn/Button";
 
 export default function Criteria() {
