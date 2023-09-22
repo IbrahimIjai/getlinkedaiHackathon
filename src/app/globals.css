@@ -64,12 +64,19 @@
   );
   border-image-slice: 1;
 }
-/* .gradient:hover {
-  background: linear-gradient(
-    45deg,
-    rgb(144, 58, 255) 0%,
-    rgb(212, 52, 254) 56.42%,
-    rgb(255, 37.9, 184.51) 99.99%,
-    rgb(254, 52, 185.32) 100%
-  );
-} */
+
+@font-face {
+  font-family: 'ClashDisplay-Bold';
+  src: url('../assets/clashDisplayFont/ClashDisplay-Bold.woff2') format('woff2'),
+       url('../assets/clashDisplayFont/ClashDisplay-Bold.woff') format('woff'),
+       url('../assets/clashDisplayFont/ClashDisplay-Bold.ttf') format('truetype');
+       font-weight: 700;
+       font-display: swap;
+       font-style: normal;
+}
+
+.clashDisplayText {
+  font-family: 'ClashDisplay-Bold', sans-serif; /* Use the ClashDisplay-Bold font */
+  font-weight: 700;
+  font-style: normal;
+}

@@ -291,6 +291,15 @@ export const Herosunderline: React.FC<IconProps> = (props) => (
     />
   </svg>
 );
+export const HerosunderlineSmall: React.FC<IconProps> = (props) => (
+<svg {...props} width="117" height="11" viewBox="0 0 117 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 9C20.2424 3.71764 70.7273 -3.67768 116 9" stroke="#FF26B9" stroke-width="3"/>
+</svg> 
+);
+
+
+
+
 export const HerosHook: React.FC<IconProps> = (props) => (
   <svg
     {...props}
@@ -320,7 +329,6 @@ export const HerosHook: React.FC<IconProps> = (props) => (
     </defs>
   </svg>
 );
-
 export const DownArrow: React.FC<IconProps> = (props) => (
   <svg
     width={15}
@@ -338,7 +346,6 @@ export const DownArrow: React.FC<IconProps> = (props) => (
     />
   </svg>
 );
-
 export const PreviousArrowTwo: React.FC<IconProps> = (props) => (
   <svg
     width={23}
@@ -399,7 +406,6 @@ export const TimeLineSeperator: React.FC<IconProps> = (props) => (
     />
   </svg>
 );
-
 export const TimeLineSeperatorMobile: React.FC<IconProps> = (props) => (
   <svg
     {...props}

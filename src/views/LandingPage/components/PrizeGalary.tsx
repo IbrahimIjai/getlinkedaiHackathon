@@ -43,7 +43,7 @@ const prizes = [
 export default function PrizeGalary() {
   const isDesktop = useMediaQuery("(min-width:1024px)");
   return (
-    <div className="flex mx-auto flex-col w-full lg:w-[55%] gap-[4.5rem] lg:gap-[8.5rem]">
+    <div className="flex mx-auto flex-col w-[90%] lg:w-[55%] gap-[4.5rem] lg:gap-[8.5rem]">
       {isDesktop && <DestopHeader />}
       <div className="flex items-center justify-center w-full gap-3 lg:gap-10 ">
         {prizes.map(({ image, position, prize, bg }) => {

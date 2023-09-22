@@ -10,7 +10,7 @@ export default function Faq() {
   const isDesktop = useMediaQuery("(min-width:1024px)");
 
   return (
-    <section className="flex flex-col md:flex-row gap-4 lg:gap-8 p-8 w-full">
+    <section className="flex flex-col md:flex-row gap-4 lg:gap-8 w-full p-10  border-b border-border/20">
       <FaqAccordion />
       {isDesktop ? (
         <Image

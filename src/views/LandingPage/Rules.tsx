@@ -4,7 +4,7 @@ import Text from "@/components/Text";
 
 export default function Rules() {
   return (
-    <section className="flex flex-col gap-5 p-5 md:flex-row items-center">
+    <section className="flex flex-col gap-5  md:flex-row items-center p-10 border-b border-border/20">
       <Image
         src={ReadRules}
         alt="Girl reading rules"

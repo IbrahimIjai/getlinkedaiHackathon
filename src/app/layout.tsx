@@ -1,8 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import {  Montserrat } from "next/font/google";
 import { Providers } from "./providers";
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 import Navbar from "@/views/Layout/Navbar";
 import Footer from "@/views/Layout/Footer";
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-background text-white`}>
+      <body className={`${montserrat.className} bg-background text-white`}>
         <Providers>
           <div className="relative flex min-h-screen flex-col">
             <Navbar />

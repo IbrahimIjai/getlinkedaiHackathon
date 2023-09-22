@@ -1,5 +1,8 @@
-import * as React from "react";
-const Arrow = (props) => (
+
+import React from "react";
+
+export type IconProps = React.SVGAttributes<SVGElement>;
+const Arrow: React.FC<IconProps> = (props) => (
   <svg
     width={71}
     height={67}

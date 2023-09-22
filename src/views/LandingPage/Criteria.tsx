@@ -6,7 +6,7 @@ import { Button } from "@/components/shadcn/Button";
 
 export default function Criteria() {
   return (
-    <section className="flex flex-col gap-5 p-5 md:flex-row items-center">
+    <section className="flex flex-col gap-5 md:flex-row items-center p-10  border-b border-border/20">
       <Image src={Judge} alt="Girl reading rules" className="m-auto" />
       <aside className="flex flex-col items-center md:items-start">
         <Text text="Judging Criteria " type="h3" isWhite />
@@ -22,7 +22,7 @@ export default function Criteria() {
             </div>
           ))}
         </div>
-        <Button className="mt-4">Read More</Button>
+        <Button className="mt-8">Read More</Button>
       </aside>
     </section>
   );
