@@ -157,8 +157,8 @@ export default function Partners() {
         />
       </div>
 
-     <div className="flex items-center flex-col">
-     <div className="flex items-center gap-[6px]">
+     <div className="flex items-center flex-col gap-[8px] ">
+     <div className="flex items-center gap-[6px] ">
         {companyGroupArrayTop.map(
           ({ name, logos, hasRightBorder, hasButtomBorder }, i) => {
             return (
