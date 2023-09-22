@@ -5,6 +5,9 @@ import Rules from "@/views/LandingPage/Rules";
 import Faq from "@/views/LandingPage/Faq";
 import TimeLine from "@/views/LandingPage/TimeLine";
 import Prizes from "@/views/LandingPage/Prizes";
+import Partners from "@/views/LandingPage/Partners";
+import PrivacyPolicy from "@/views/LandingPage/PrivacyPolicy";
+
 export default function HomePage() {
   return (
     <main>
@@ -15,6 +18,8 @@ export default function HomePage() {
       <Faq/>
       <TimeLine/>
       <Prizes/>
+      <Partners/>
+      <PrivacyPolicy/>
       {/* 
         <HeroPage />
         <Line /> 

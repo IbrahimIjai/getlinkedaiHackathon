@@ -273,7 +273,6 @@ export const MinusIcon: React.FC<IconProps> = (props) => (
   </svg>
 );
 
-
 //Herospage, FrontPage
 
 export const Herosunderline: React.FC<IconProps> = (props) => (
@@ -379,20 +378,72 @@ export const PreviousArrowTwo: React.FC<IconProps> = (props) => (
   </svg>
 );
 
-
 //TimeLine, FrontPage
 
 export const TimeLineSeperator: React.FC<IconProps> = (props) => (
-<svg {...props} width="4" height="137" viewBox="0 0 4 137" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line x1="2" y1="8.74228e-08" x2="1.99999" y2="137" stroke="#D434FE" stroke-width="4"/>
+  <svg
+    {...props}
+    width="4"
+    height="137"
+    viewBox="0 0 4 137"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <line
+      x1="2"
+      y1="8.74228e-08"
+      x2="1.99999"
+      y2="137"
+      stroke="#D434FE"
+      stroke-width="4"
+    />
+  </svg>
+);
+
+export const TimeLineSeperatorMobile: React.FC<IconProps> = (props) => (
+  <svg
+    {...props}
+    width="2"
+    height="77"
+    viewBox="0 0 2 77"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <line
+      x1="1"
+      y1="4.37114e-08"
+      x2="0.999997"
+      y2="77"
+      stroke="#D434FE"
+      stroke-width="2"
+    />
+  </svg>
+);
+
+//Partners Frontpage
+
+export const HorizontalSeprators: React.FC<IconProps> = (props) => (
+  <svg {...props} width="258" height="5" viewBox="0 0 258 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line y1="2.67578" x2="257.298" y2="2.67578" stroke="#D434FE" stroke-width="4"/>
+</svg>
+
+);
+export const HorizontalSepratorsMobile: React.FC<IconProps> = (props) => (
+<svg {...props} width="69" height="3" viewBox="0 0 69 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="0.496094" y1="1.27002" x2="68.7671" y2="1.27002" stroke="#D434FE" stroke-width="2"/>
 </svg>
 
 );
 
-export const TimeLineSeperatorMobile: React.FC<IconProps> = (props) => (
-<svg {...props} width="2" height="77" viewBox="0 0 2 77" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line x1="1" y1="4.37114e-08" x2="0.999997" y2="77" stroke="#D434FE" stroke-width="2"/>
+export const VericalSeperator: React.FC<IconProps> = (props) => (
+<svg {...props} width="5" height="113" viewBox="0 0 5 113" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="2.90848" y1="112.476" x2="2.90848" y2="0.00025177" stroke="#D434FE" stroke-width="4"/>
 </svg>
+);
 
-  
+export const VericalSeperatorMobile: React.FC<IconProps> = (props) => (
+<svg width="3" height="31" viewBox="0 0 3 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="1.1543" y1="30.0532" x2="1.1543" y2="0.20904" stroke="#D434FE" stroke-width="2"/>
+</svg>
   );
+

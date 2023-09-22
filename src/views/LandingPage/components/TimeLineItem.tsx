@@ -24,7 +24,7 @@ export default function TimeLineItem({ timelineIndex, unixTimestamp }: props) {
             timelineIndex % 2 == 0 ? "flex-row-reverse text-left" : "text-right"
           }`}
         >
-          <div className="w-[42%] hidden lg:inline -mb-8">
+          <div className="w-[42%] hidden lg:inline">
             <Text type="h3" text="Hackathon Announcement" />
             <Text
               type="p"

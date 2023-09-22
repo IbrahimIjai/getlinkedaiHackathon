@@ -37,9 +37,6 @@
   }
 }
 
-/* body {
-  background-color: var(--background);
-} */
 .flareBg {
   background-image: url("/flare.png");
   background-repeat: no-repeat;
