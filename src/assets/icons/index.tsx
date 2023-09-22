@@ -447,3 +447,20 @@ export const VericalSeperatorMobile: React.FC<IconProps> = (props) => (
 </svg>
   );
 
+
+  //PrivacyPolicy, Homepage
+
+  export const GreenCheckMark: React.FC<IconProps> = (props) => (
+    <svg {...props} width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="8.5" cy="8.5" r="8.5" fill="#2DE100"/>
+    <path d="M5 8L7 10.5L13.5 6" stroke="white" stroke-width="2"/>
+    </svg>
+  );
+
+
+//Footer, Layout
+export const MiniVerticalSeperator: React.FC<IconProps> = (props) => (
+  <svg {...props} width="2" height="17" viewBox="0 0 2 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <line x1="1" y1="4.37114e-08" x2="0.999999" y2="17" stroke="#D434FE" stroke-width="2"/>
+  </svg>
+  );
