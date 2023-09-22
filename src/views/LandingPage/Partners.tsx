@@ -113,36 +113,36 @@ const companyGroupArrayTop: company[] = [
   },
 ];
 const companyGroupArrayButtom: company[] = [
-    {
-        name: "Whisperms company",
-        logos: {
-          desktop: wispermLogoBig,
-          mobile: wispermLogoSmall,
-        },
-      hasButtomBorder: false,
-      hasRightBorder: true,
+  {
+    name: "Whisperms company",
+    logos: {
+      desktop: wispermLogoBig,
+      mobile: wispermLogoSmall,
     },
-  
-    {
-      name: "Paybox",
-      logos: {
-        desktop: payboxLogoBig,
-        mobile: payboxLogoSmall,
-      },
-      hasButtomBorder: false,
-      hasRightBorder: true,
+    hasButtomBorder: false,
+    hasRightBorder: true,
+  },
+
+  {
+    name: "Paybox",
+    logos: {
+      desktop: payboxLogoBig,
+      mobile: payboxLogoSmall,
     },
-  
-    {
-      name: "Vizual plus",
-      logos: {
-        desktop: visualPlusLogoBig,
-        mobile: visualPlusLogoSmall,
-      },
-      hasButtomBorder: false,
-      hasRightBorder: false,
+    hasButtomBorder: false,
+    hasRightBorder: true,
+  },
+
+  {
+    name: "Vizual plus",
+    logos: {
+      desktop: visualPlusLogoBig,
+      mobile: visualPlusLogoSmall,
     },
-  ];
+    hasButtomBorder: false,
+    hasRightBorder: false,
+  },
+];
 
 export default function Partners() {
   const isDesktop = useMediaQuery("(min-width:1024px)");
@@ -157,41 +157,41 @@ export default function Partners() {
         />
       </div>
 
-     <div className="flex items-center flex-col gap-[8px] ">
-     <div className="flex items-center gap-[6px] ">
-        {companyGroupArrayTop.map(
-          ({ name, logos, hasRightBorder, hasButtomBorder }, i) => {
-            return (
-              <SingleCompany
-                name={name}
-                logos={logos}
-                hasButtomBorder={hasButtomBorder}
-                hasRightBorder={hasRightBorder}
-                isDesktop={isDesktop}
-                key={i}
-              />
-            );
-          }
-        )}
+      <div className="flex items-center flex-col gap-[8px]  bg-white/10 border border-primary rounded-[6px]  p-[1.5rem]">
+        <div className="flex items-center  ">
+          {companyGroupArrayTop.map(
+            ({ name, logos, hasRightBorder, hasButtomBorder }, i) => {
+              return (
+                <SingleCompany
+                  name={name}
+                  logos={logos}
+                  hasButtomBorder={hasButtomBorder}
+                  hasRightBorder={hasRightBorder}
+                  isDesktop={isDesktop}
+                  key={i}
+                />
+              );
+            }
+          )}
+        </div>
+        <div className="flex items-center gap-[6px] ml-[12px]">
+          {companyGroupArrayButtom.map(
+            ({ name, logos, hasRightBorder, hasButtomBorder }, i) => {
+              return (
+                <SingleCompany
+                  name={name}
+                  logos={logos}
+                  hasButtomBorder={hasButtomBorder}
+                  hasRightBorder={hasRightBorder}
+                  isDesktop={isDesktop}
+                  key={i}
+                />
+              );
+            }
+          )}
+        </div>
       </div>
-      <div className="flex items-center gap-[6px]">
-        {companyGroupArrayButtom.map(
-          ({ name, logos, hasRightBorder, hasButtomBorder }, i) => {
-            return (
-              <SingleCompany
-                name={name}
-                logos={logos}
-                hasButtomBorder={hasButtomBorder}
-                hasRightBorder={hasRightBorder}
-                isDesktop={isDesktop}
-                key={i}
-              />
-            );
-          }
-        )}
-      </div>
-     </div>
-     
+
       {/* <div className="flex items-center justify-center w-full bg-white/10 border border-primary rounded-[6px] p-[1.5rem]">
         {ImagePairData.map(({ company1, company2, hasRightBorder }, i) => {
           return (
@@ -257,25 +257,22 @@ const SingleCompany = ({
 }: company) => {
   return (
     <div className="flex flex-col items-center gap-3">
-      <div className="flex items-center w-full gap-3">
-        <div className="flex items-center justify-center w-[68px] h-[30px] p-3">
+      <div className="flex items-center w-full ">
+        <div className="flex mx-[12px] items-center justify-center w-[68px] lg:w-[257px] h-[30px] lg:h-[122px]">
           <Image
             src={isDesktop ? logos.desktop : logos.mobile}
             alt={name + {} + "Logo"}
           />
         </div>
         {hasRightBorder && (
-          <div>
+          <div className="ml-[12px]">
             {isDesktop ? <VericalSeperator /> : <VericalSeperatorMobile />}
           </div>
         )}
       </div>
       {hasButtomBorder && (
         <div>
-         { isDesktop ? (
-          <HorizontalSeprators />
-          ) : (
-          <HorizontalSepratorsMobile />)}
+          {isDesktop ? <HorizontalSeprators /> : <HorizontalSepratorsMobile />}
         </div>
       )}
     </div>
