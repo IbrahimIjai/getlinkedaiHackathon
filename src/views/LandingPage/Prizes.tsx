@@ -9,7 +9,7 @@ import prize_big from "./images/prize_big.png";
 import PrizeGalary from "./components/PrizeGalary";
 
 import roundedflare from "./images/roundedflare.png"
-import Glow from "./components/Glow";
+import Glow from "../../components/Glow";
 
 export default function Prizes() {
   const isDesktop = useMediaQuery("(min-width:1024px)");

@@ -1,11 +1,17 @@
+"use client"
+
 import Image from "next/image";
 import BigIdea from "./images/BigIdea.png";
 import { Arrow } from "./utils/svg";
 import Text from "@/components/Text";
+import useMediaQuery from "@/hooks/useMediaQuery";
+import Stars from "@/components/NewStars";
+import { stars } from "@/assets/images";
 
 export default function Introduction() {
   return (
-    <section className=" grid lg:grid-cols-2 gap-5 p-10 md:flex-row items-center border-b border-border/20">
+    <section className=" grid lg:grid-cols-2 gap-5 p-10 md:flex-row items-center relative border-b border-border/20">
+      <Decoration/>
       <aside className="flex md:gap-2 flex-col md:flex-row items-center max-w-md m-auto">
         <Image src={BigIdea} alt="Big Idea" className="m-[2rem] p-6" />
         <Arrow className="w-7 h-7 md:w-12 md:h-12 md:m-0" />
@@ -22,3 +28,22 @@ export default function Introduction() {
     </section>
   );
 }
+
+const Decoration = () => {
+  const isDesktop = useMediaQuery("(min-width:1024px)");
+
+  return (
+    <>
+      <Stars
+        src={isDesktop ? stars.pinkstarbig : stars.pinkstarsmall}
+        left={isDesktop ? "90px" : "80px"}
+        top={isDesktop ? "80px" : "180px"}
+      />
+      <Stars
+        src={isDesktop ? stars.purplestarbig : stars.purplestarsmall}
+        right={isDesktop ? "90px" : "80px"}
+        top={isDesktop ? "120px" : "300px"}
+      />
+    </>
+  );
+};

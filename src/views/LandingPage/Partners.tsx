@@ -27,7 +27,7 @@ import winwiseLogoSmall from "./images/WinwiseLogo_small.png";
 
 import visualPlusLogoBig from "./images/visualPlus_big.png";
 import visualPlusLogoSmall from "./images/visualPlus_small.png";
-import Glow from "./components/Glow";
+import Glow from "../../components/Glow";
 import roundedflare from "./images/roundedflare.png";
 
 const companyGroupArrayTop: company[] = [

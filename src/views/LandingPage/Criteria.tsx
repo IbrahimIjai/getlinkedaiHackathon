@@ -7,7 +7,7 @@ import { criteriaData } from "./utils/criteriaData";
 import { Button } from "@/components/shadcn/Button";
 import roundedflare from "./images/roundedflare.png";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import Glow from "./components/Glow";
+import Glow from "../../components/Glow";
 
 export default function Criteria() {
   const isDesktop = useMediaQuery("(min-width:1024px)");

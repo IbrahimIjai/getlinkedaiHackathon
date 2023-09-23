@@ -9,7 +9,7 @@ import { siteConfig } from "@/config/site";
 import { GreenCheckMark } from "@/assets/icons";
 import { Button } from "@/components/shadcn/Button";
 import Image from "next/image";
-import Glow from "./components/Glow";
+import Glow from "../../components/Glow";
 import roundedflare from "./images/roundedflare.png"
 import useMediaQuery from "@/hooks/useMediaQuery";
 
