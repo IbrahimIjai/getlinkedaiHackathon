@@ -4,14 +4,13 @@ import Text from "@/components/Text";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import React from "react";
 import Image from "next/image";
-import prize_small from "./images/prize_small.png";
-import prize_big from "./images/prize_big.png";
 import PrizeGalary from "./components/PrizeGalary";
-
 import roundedflare from "./images/roundedflare.png";
 import Glow from "../../components/Glow";
 import Stars from "@/components/NewStars";
 import { stars } from "@/assets/images";
+import { HomeImages } from "./images";
+
 
 export default function Prizes() {
   const isDesktop = useMediaQuery("(min-width:1024px)");
@@ -30,14 +29,14 @@ export default function Prizes() {
               text="Highlight of the prizes or rewards for winners and for participants."
             />
           </div>
-          <Image src={prize_small} alt="Prize picture" />
+          <Image src={HomeImages.prizeSmall} alt="Prize picture" />
         </div>
       )}
       <div className="flex m-4  lg:gap-[3rem] justify-between items-end relative w-full">
         {isDesktop && (
           <Image
             className="hidden lg:inline w-[40%]"
-            src={prize_big}
+            src={HomeImages.prizeSmall}
             alt="Prize picture"
           />
         )}

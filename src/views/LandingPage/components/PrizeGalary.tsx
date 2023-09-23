@@ -1,22 +1,18 @@
 import React from "react";
 
-import bronze_small from "../images/bronze_small.png";
-import silver_small from "../images/silver_small.png";
-import gold_small from "../images/gold_small.png";
-import bronze_big from "../images/bronze_big.png";
-import silver_big from "../images/silver_big.png";
-import gold_big from "../images/gold_big.png";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import Image from "next/image";
 import Text from "@/components/Text";
+import { HomeImages } from "../images";
+
 
 const prizes = [
   {
     position: "2nd",
     prize: "300,000",
     image: {
-      desktop: silver_big,
-      mobile: silver_small,
+      desktop: HomeImages.silverBig,
+      mobile: HomeImages.silverSmall,
     },
     bg: "primary",
   },
@@ -24,8 +20,8 @@ const prizes = [
     position: "1st",
     prize: "400,000",
     image: {
-      desktop: gold_big,
-      mobile: gold_small,
+      desktop: HomeImages.goldBig,
+      mobile: HomeImages.goldSmall,
     },
     bg: "background",
   },
@@ -33,8 +29,8 @@ const prizes = [
     position: "3rd",
     prize: "150,000",
     image: {
-      desktop: bronze_big,
-      mobile: bronze_small,
+      desktop: HomeImages.bronzeBig,
+      mobile: HomeImages.bronzeSmall,
     },
     bg: "primary",
   },

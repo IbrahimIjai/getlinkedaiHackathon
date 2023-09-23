@@ -24,13 +24,13 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 export default function HeroPage() {
   const isDesktop = useMediaQuery("(min-width:1024px)");
   return (
-    <section className="grid lg:grid-cols-2 pt-20 pb-0 px-5 lg:px-[5rem] items-center w-full relative gap-6 md:flex-row border-b border-border/20">
+    <section className="grid lg:grid-cols-2 pt-20 pb-0  lg:px-[5rem] items-center w-full relative gap-6 md:flex-row border-b border-border/20">
       <Decorations />
 
       <aside className="lg:hidden mx-auto">
         <IgnitingText />
       </aside>
-      <aside className="flex flex-col  gap-4 items-center md:items-start">
+      <aside className="flex flex-col px-8 gap-4 items-center md:items-start">
         <HerosLogoText />
         <Text
           text="Participate in getlinked tech Hackathon 2023 stand a chance to win a Big prize"
@@ -75,14 +75,14 @@ const Decorations = () => {
           {" "}
           <Glow
             src={flare}
-            width="650px"
+            width="550px"
             height="550px"
             bottom="20px"
             right="1px"
           />
           <Glow
             src={fullflare}
-            width="650px"
+            width="550px"
             height="550px"
             top="0px"
             left="25px"

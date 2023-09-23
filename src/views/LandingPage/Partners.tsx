@@ -9,35 +9,18 @@ import Image from "next/image";
 import React from "react";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import Text from "@/components/Text";
-
-import libertyCompanyLogoBig from "./images/LibertycompanyLogo_big.png";
-import libertyCompanyLogoSmall from "./images/LibertycompanyLogo_small.png";
-
-import wispermLogoBig from "./images/wisperLog_big.png";
-import wispermLogoSmall from "./images/wisperLog_small.png";
-
-import libertyPayLogBig from "./images/libertypayLogo_big.png";
-import libertyPayLogSmall from "./images/libertypayLogo_small.png";
-
-import payboxLogoBig from "./images/payboxLogo_big.png";
-import payboxLogoSmall from "./images/payboxLogo_small.png";
-
-import winwiseLogoBig from "./images/WinwiseLogo_big.png";
-import winwiseLogoSmall from "./images/WinwiseLogo_small.png";
-
-import visualPlusLogoBig from "./images/visualPlus_big.png";
-import visualPlusLogoSmall from "./images/visualPlus_small.png";
 import Glow from "../../components/Glow";
 import roundedflare from "./images/roundedflare.png";
 import Stars from "@/components/NewStars";
 import { stars } from "@/assets/images";
+import { HomeImages } from "./images";
 
 const companyGroupArrayTop: company[] = [
   {
     name: "Liberty Company",
     logos: {
-      desktop: libertyCompanyLogoBig,
-      mobile: libertyCompanyLogoSmall,
+      desktop: HomeImages.libertyCompanyBig,
+      mobile: HomeImages.libertyCompanySmall,
     },
     hasButtomBorder: true,
     hasRightBorder: true,
@@ -46,8 +29,8 @@ const companyGroupArrayTop: company[] = [
   {
     name: "Liberty Pay",
     logos: {
-      desktop: libertyPayLogBig,
-      mobile: libertyPayLogSmall,
+      desktop: HomeImages.libertyPayBig,
+      mobile: HomeImages.libertyPaySmall,
     },
     hasButtomBorder: true,
     hasRightBorder: true,
@@ -56,8 +39,8 @@ const companyGroupArrayTop: company[] = [
   {
     name: "Winwise",
     logos: {
-      desktop: winwiseLogoBig,
-      mobile: winwiseLogoSmall,
+      desktop: HomeImages.winwiseBig,
+      mobile: HomeImages.winwiseSmall,
     },
     hasButtomBorder: true,
     hasRightBorder: false,
@@ -67,8 +50,8 @@ const companyGroupArrayButtom: company[] = [
   {
     name: "Whisperms company",
     logos: {
-      desktop: wispermLogoBig,
-      mobile: wispermLogoSmall,
+      desktop: HomeImages.whispermBig,
+      mobile: HomeImages.whispermSmall,
     },
     hasButtomBorder: false,
     hasRightBorder: true,
@@ -77,8 +60,8 @@ const companyGroupArrayButtom: company[] = [
   {
     name: "Paybox",
     logos: {
-      desktop: payboxLogoBig,
-      mobile: payboxLogoSmall,
+      desktop: HomeImages.payboxBig,
+      mobile: HomeImages.payboxSmall,
     },
     hasButtomBorder: false,
     hasRightBorder: true,
@@ -87,8 +70,8 @@ const companyGroupArrayButtom: company[] = [
   {
     name: "Vizual plus",
     logos: {
-      desktop: visualPlusLogoBig,
-      mobile: visualPlusLogoSmall,
+      desktop: HomeImages.vizualBig,
+      mobile: HomeImages.vizualSmall,
     },
     hasButtomBorder: false,
     hasRightBorder: false,

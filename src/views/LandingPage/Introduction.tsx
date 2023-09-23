@@ -1,19 +1,19 @@
 "use client"
 
 import Image from "next/image";
-import BigIdea from "./images/BigIdea.png";
 import { Arrow } from "./utils/svg";
 import Text from "@/components/Text";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import Stars from "@/components/NewStars";
 import { stars } from "@/assets/images";
+import { HomeImages } from "./images";
 
 export default function Introduction() {
   return (
     <section className=" grid lg:grid-cols-2 gap-5 p-10 md:flex-row items-center relative border-b border-border/20">
       <Decoration/>
       <aside className="flex md:gap-2 flex-col md:flex-row items-center max-w-md m-auto">
-        <Image src={BigIdea} alt="Big Idea" className="m-[2rem] p-6" />
+        <Image src={HomeImages.bigIdea} alt="Big Idea" className="m-[2rem] p-6" />
         <Arrow className="w-7 h-7 md:w-12 md:h-12 md:m-0" />
       </aside>
       <aside className="flex mb-6 flex-col items-center md:items-start">

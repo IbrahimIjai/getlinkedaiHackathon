@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${montserrat.className} bg-background text-white`}>
+      <body className={`${montserrat.className} bg-background text-white overflow-x-hidden`}>
         <Providers>
           <div className="relative flex min-h-screen flex-col">
             <Navbar />
