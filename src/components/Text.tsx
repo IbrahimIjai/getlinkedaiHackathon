@@ -19,7 +19,7 @@ export default function Text({ text, isWhite, type, className }: Props) {
 function H1({ text, isWhite, className }: Props) {
   return (
     <h1
-      className={`text-3xl font-bold ${
+      className={` text-2xl lg:text-3xl font-bold ${
         isWhite ? "text-white" : "text-primary"
       } ${className ? className : ""}`}
     >
@@ -49,3 +49,5 @@ function P({ text, isWhite, className }: Props) {
     </p>
   );
 }
+
+

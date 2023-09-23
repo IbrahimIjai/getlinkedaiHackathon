@@ -27,7 +27,8 @@ import winwiseLogoSmall from "./images/WinwiseLogo_small.png";
 
 import visualPlusLogoBig from "./images/visualPlus_big.png";
 import visualPlusLogoSmall from "./images/visualPlus_small.png";
-
+import Glow from "./components/Glow";
+import roundedflare from "./images/roundedflare.png";
 
 const companyGroupArrayTop: company[] = [
   {
@@ -95,7 +96,21 @@ const companyGroupArrayButtom: company[] = [
 export default function Partners() {
   const isDesktop = useMediaQuery("(min-width:1024px)");
   return (
-    <div className="w-full p-[2rem]">
+    <div className="w-full p-[2rem] relative border-b border-border/10">
+      <Glow
+        src={roundedflare}
+        width={isDesktop ? "650px" : "300px"}
+        height={isDesktop ? "650px" : "300px"}
+        bottom={isDesktop ? "-200px" : "-120px"}
+        right={isDesktop ? "-200px" : "-120px"}
+      />
+      <Glow
+        src={roundedflare}
+        width={isDesktop ? "550px" : "300px"}
+        height={isDesktop ? "550px" : "300px"}
+        top={isDesktop ? "-50px" : "0"}
+        left={isDesktop ? "-80px" : "-30px"}
+      />
       <div className="text-center flex flex-col gap-4 mb-8">
         <Text type="h1" text="Partners and Sponsors" isWhite />
         <Text
@@ -105,7 +120,7 @@ export default function Partners() {
         />
       </div>
 
-      <div className="flex items-center flex-col gap-[8px]  bg-white/10 border border-primary rounded-[6px]  p-[2.5rem] md:p-[3.5rem] lg:p-[5rem]">
+      <div className="flex items-center flex-col gap-[8px]  bg-white/5 border border-primary rounded-[6px]  p-[2.5rem] md:p-[3.5rem] lg:p-[5rem]">
         <div className="flex items-center  ">
           {companyGroupArrayTop.map(
             ({ name, logos, hasRightBorder, hasButtomBorder }, i) => {
@@ -142,7 +157,6 @@ export default function Partners() {
     </div>
   );
 }
-
 //neww
 interface company {
   name: string;
@@ -174,7 +188,6 @@ const SingleCompany = ({
           <div className="ml-[12px]">
             {isDesktop ? <VericalSeperator /> : <VericalSeperatorMobile />}
           </div>
-          
         )}
       </div>
       {hasButtomBorder && (
@@ -185,5 +198,4 @@ const SingleCompany = ({
     </div>
   );
 };
-
 //achive

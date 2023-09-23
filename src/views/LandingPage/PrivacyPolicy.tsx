@@ -1,3 +1,5 @@
+"use client"
+
 import Text from "@/components/Text";
 import privacybig from "./images/privacybig.png";
 import privacysmall from "./images/privacysmall.png";
@@ -7,13 +9,25 @@ import { siteConfig } from "@/config/site";
 import { GreenCheckMark } from "@/assets/icons";
 import { Button } from "@/components/shadcn/Button";
 import Image from "next/image";
+import Glow from "./components/Glow";
+import roundedflare from "./images/roundedflare.png"
+import useMediaQuery from "@/hooks/useMediaQuery";
 
 export default function PrivacyPolicy() {
+
   const policyData = siteConfig.PrivacyPolicy;
+  const isDesktop = useMediaQuery("(min-width:1024px)");
 
   return (
-    <div className="grid items-center lg:grid-cols-2 p-[4rem]">
-      <div className="flex flex-col items-center lg:items-start gap-3 lg:gap-6">
+    <div className="grid items-center lg:grid-cols-2 p-[4rem] relative">
+         <Glow
+        src={roundedflare}
+        width={isDesktop ? "650px" : "300px"}
+        height={isDesktop ? "650px" : "300px"}
+        top={isDesktop ? "250px" : "350px"}
+        left={isDesktop ? "-160px" : "-50px"}
+      />
+      <div className="flex flex-col  items-center lg:items-start gap-6">
         <div className="flex flex-col items-center text-center lg:items-start gap-3">
           <div>
             <Text type="h1" text="Privacy Policy and" isWhite />
@@ -31,10 +45,10 @@ export default function PrivacyPolicy() {
           />
         </div>
 
-        <div className="bg-white/10 border border-primary flex flex-col gap-6 items-center text-left p-[2rem] rounded-[5px]">
+        <div className="bg-white/5 border border-primary flex flex-col gap-6 items-center text-left p-[2rem] rounded-[5px]">
           <Text type="p" text={policyData.policy} isWhite className="" />
          <div className="">
-         <Text type="h1" text="Licensing Policy" className="text-left"/>
+         <Text type="p" text="Licensing Policy" className="text-left font-bold"/>
           <Text
             type="p"
             text="Here are terms of our Standard License:"
@@ -42,7 +56,7 @@ export default function PrivacyPolicy() {
             className="font-bold"
           />
          </div>
-          <div className="flex flex-col items-start">
+          <div className="flex flex-col gap-7 items-start">
             {policyData.standardLicense.map((item, i) => {
               return (
                 <div key={i} className="flex items-start gap-2">

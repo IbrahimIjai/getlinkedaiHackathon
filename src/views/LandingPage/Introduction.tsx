@@ -5,7 +5,7 @@ import Text from "@/components/Text";
 
 export default function Introduction() {
   return (
-    <section className="flex flex-col gap-5 p-10 md:flex-row items-center border-b border-border/20">
+    <section className=" grid lg:grid-cols-2 gap-5 p-10 md:flex-row items-center border-b border-border/20">
       <aside className="flex md:gap-2 flex-col md:flex-row items-center max-w-md m-auto">
         <Image src={BigIdea} alt="Big Idea" className="m-[2rem] p-6" />
         <Arrow className="w-7 h-7 md:w-12 md:h-12 md:m-0" />

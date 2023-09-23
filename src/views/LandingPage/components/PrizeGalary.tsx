@@ -45,7 +45,7 @@ export default function PrizeGalary() {
   return (
     <div className="flex mx-auto flex-col w-[90%] lg:w-[55%] gap-[4.5rem] lg:gap-[8.5rem]">
       {isDesktop && <DestopHeader />}
-      <div className="flex items-center justify-center w-full gap-3 lg:gap-10 ">
+      <div className="flex items-center justify-center w-full gap-3 lg:gap-5 ">
         {prizes.map(({ image, position, prize, bg }) => {
           return (
             <div key={prize} className="md:w-1/2 lg:w-1/3 xl:w-1/4">
@@ -101,13 +101,16 @@ const PriceCard = ({
         >
           <Text type="h1" text={`${position}`} isWhite />
           <Text type="p" text="Runner" isWhite />
-          <Text
+          <p className={`text-[16px] lg:text-[24px] font-bold ${
+              position == "1st" ? "text-[#903AFF]" : "text-primary"
+            }`}>N{prizeAmount}</p>
+          {/* <Text
             type="h1"
             text={`N${prizeAmount}`}
             className={`${
               position == "1st" ? "text-[#903AFF]" : "text-primary"
             }`}
-          />
+          /> */}
         </div>
       </div>
     </div>

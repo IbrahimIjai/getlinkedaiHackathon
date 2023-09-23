@@ -8,11 +8,31 @@ import prize_small from "./images/prize_small.png";
 import prize_big from "./images/prize_big.png";
 import PrizeGalary from "./components/PrizeGalary";
 
+import roundedflare from "./images/roundedflare.png"
+import Glow from "./components/Glow";
+
 export default function Prizes() {
   const isDesktop = useMediaQuery("(min-width:1024px)");
 
   return (
-    <div className="flex flex-col gap-[4.5rem] p-[5rem]   items-center bg-black/10 ">
+    <div className="flex  flex-col gap-[4.5rem] p-[5rem] relative   items-center bg-black/10  ">
+      
+      <Glow
+        src={roundedflare}
+        width={isDesktop ? "650px" : "350px"}
+        height={isDesktop ? "650px" : "350px"}
+        top="90px"
+        left={isDesktop? "50px":"90px"}
+        // right="-290px"
+      />
+      <Glow
+        src={roundedflare}
+        width={isDesktop ? "650px" : "350px"}
+        height={isDesktop ? "650px" : "350px"}
+        bottom={isDesktop? "-250px":"50px"}
+        right={isDesktop? "-390px": "-290px"}
+      />
+
       {!isDesktop && (
         <div className="flex flex-col items-center">
           <div className="w-full flex text-center flex-col items-center">
