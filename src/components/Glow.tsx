@@ -9,7 +9,7 @@ export default function Glow({
   left,
   bottom,
   right,
-  src
+  src,
 }: {
   width: string;
   height: string;
@@ -17,10 +17,10 @@ export default function Glow({
   bottom?: string;
   left?: string;
   right?: string;
-  src:any;
+  src: any;
 }) {
   return (
-    <div style={{position:"absolute", top, left, bottom, right, zIndex: -1}}>
+    <div style={{ position: "absolute", top, left, bottom, right, zIndex: -1 }}>
       <div style={{ width, height, position: "relative" }}>
         <Image fill src={src} alt="glow" />
       </div>

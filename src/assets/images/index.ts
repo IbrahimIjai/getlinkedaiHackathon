@@ -1,2 +1,1 @@
-
-export * as stars from "./stars"
+export * as stars from "./stars";
