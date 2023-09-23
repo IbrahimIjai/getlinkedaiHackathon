@@ -11,7 +11,7 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 
 export default function TimeLine() {
   return (
-    <section className="px-[2.5rem] lg:px-[4rem] py-[4rem] lg:py-[8rem] relative">
+    <section className="px-[3.5rem] lg:px-[6rem] py-[4rem] lg:py-[8rem] relative">
       <Decoration/>
       <div className="flex w-full items-center flex-col gap-2 mb-4">
         <Text type="h1" text="Timeline" isWhite />

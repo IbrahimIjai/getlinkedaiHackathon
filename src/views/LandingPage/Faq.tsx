@@ -13,7 +13,7 @@ export default function Faq() {
   const isDesktop = useMediaQuery("(min-width:1024px)");
 
   return (
-    <section className="grid lg:grid-cols-2 flex-col md:flex-row gap-4 lg:gap-10 w-full p-10 relative border-b border-border/20">
+    <section className="grid lg:grid-cols-2 flex-col md:flex-row gap-4 lg:gap-10 w-full p-[4rem] relative border-b border-border/20">
       
       <Decoration/>
       <FaqAccordion />

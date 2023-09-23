@@ -9,7 +9,7 @@ import { siteConfig } from "@/config/site";
 
 export function FaqAccordion() {
   return (
-    <div className="flex lg:px-[2rem] lg:mt-[5rem] flex-col items-center gap-4 lg:items-start w-full">
+    <div className="flex lg:pl-[4rem]  lg:mt-[5rem] flex-col items-center gap-4 lg:items-start w-full">
       <Text type="h1" text="Frequently Asked" isWhite />
       <Text type="h1" text="Questions" className="mb-3"/>
       <div>

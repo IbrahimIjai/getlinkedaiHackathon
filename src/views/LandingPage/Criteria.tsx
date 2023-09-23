@@ -16,14 +16,14 @@ export default function Criteria() {
   const isDesktop = useMediaQuery("(min-width:1024px)");
 
   return (
-    <section className="grid lg:grid-cols-2 gap-5 md:flex-row items-end p-10 relative  border-b border-border/20">
+    <section className="grid lg:grid-cols-2 gap-2 p-[3rem] lg:p-[4rem] md:flex-row items-end relative  border-b border-border/20">
       <Decoration />
       <div className="lg:p-[2.3rem]">
-      <Image
-        src={isDesktop ? judgeBig : judgeSmall}
-        alt="Girl reading rules"
-        className="m-auto"
-      />
+        <Image
+          src={isDesktop ? judgeBig : judgeSmall}
+          alt="Girl reading rules"
+          className="m-auto"
+        />
       </div>
       <aside className="flex flex-col items-center md:items-start">
         <Text text="Judging Criteria " type="h1" isWhite />
@@ -74,7 +74,7 @@ const Decoration = () => {
         top={isDesktop ? "" : "220px"}
         bottom={isDesktop ? "40px" : ""}
       />
-       <Stars
+      <Stars
         src={isDesktop ? stars.graystarbig : stars.graystarsmall}
         left={isDesktop ? "25%" : "75%"}
         bottom={isDesktop ? "220px" : "15px"}

@@ -13,14 +13,13 @@ import { stars } from "@/assets/images";
 export default function Rules() {
   return (
     <section className="grid relative lg:grid-cols-2 gap-5  md:flex-row items-center p-10 border-b border-border/20">
-      
       <Decoration/>
       <Image
         src={ReadRules}
         alt="Girl reading rules"
         className="m-auto md:order-1"
       />
-      <aside className="flex flex-col items-center md:items-start">
+      <aside className="flex lg:pl-[2rem] flex-col items-center md:items-start">
         <Text text="Rules and " type="h3" isWhite />
         <Text text="Guidelines" type="h3" className="mb-5 mt-1" />
         <Text

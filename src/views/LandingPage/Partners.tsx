@@ -98,7 +98,7 @@ const companyGroupArrayButtom: company[] = [
 export default function Partners() {
   const isDesktop = useMediaQuery("(min-width:1024px)");
   return (
-    <div className="w-full p-[3rem] lg:p-[5rem] relative border-b border-border/10">
+    <div className="w-full p-[3rem] lg:p-[6rem] relative border-b border-border/10">
       <Decoration/>
       <div className="text-center flex flex-col gap-4 mb-8">
         <Text type="h1" text="Partners and Sponsors" isWhite />
@@ -109,7 +109,7 @@ export default function Partners() {
         />
       </div>
 
-      <div className="flex mb-[5rem] items-center flex-col gap-[8px]  border border-primary rounded-[6px]  p-[2.5rem] md:p-[3.5rem] lg:p-[5rem]">
+      <div className="flex mb-[5rem] lg:mt-4 items-center flex-col gap-[8px]  border border-primary rounded-[6px]  p-[2.5rem] md:p-[3.5rem] lg:p-[5rem]">
         <div className="flex items-center  ">
           {companyGroupArrayTop.map(
             ({ name, logos, hasRightBorder, hasButtomBorder }, i) => {

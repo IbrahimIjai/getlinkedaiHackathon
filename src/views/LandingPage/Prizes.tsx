@@ -33,7 +33,7 @@ export default function Prizes() {
           <Image src={prize_small} alt="Prize picture" />
         </div>
       )}
-      <div className="flex  lg:gap-[3rem] justify-between items-end relative w-full">
+      <div className="flex m-4  lg:gap-[3rem] justify-between items-end relative w-full">
         {isDesktop && (
           <Image
             className="hidden lg:inline w-[40%]"
