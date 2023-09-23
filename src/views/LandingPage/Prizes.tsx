@@ -8,31 +8,17 @@ import prize_small from "./images/prize_small.png";
 import prize_big from "./images/prize_big.png";
 import PrizeGalary from "./components/PrizeGalary";
 
-import roundedflare from "./images/roundedflare.png"
+import roundedflare from "./images/roundedflare.png";
 import Glow from "../../components/Glow";
+import Stars from "@/components/NewStars";
+import { stars } from "@/assets/images";
 
 export default function Prizes() {
   const isDesktop = useMediaQuery("(min-width:1024px)");
 
   return (
     <div className="flex  flex-col gap-[4.5rem] p-[5rem] relative   items-center bg-black/10  ">
-      
-      <Glow
-        src={roundedflare}
-        width={isDesktop ? "650px" : "350px"}
-        height={isDesktop ? "650px" : "350px"}
-        top="90px"
-        left={isDesktop? "50px":"90px"}
-        // right="-290px"
-      />
-      <Glow
-        src={roundedflare}
-        width={isDesktop ? "650px" : "350px"}
-        height={isDesktop ? "650px" : "350px"}
-        bottom={isDesktop? "-250px":"50px"}
-        right={isDesktop? "-390px": "-290px"}
-      />
-
+      <Decoration />
       {!isDesktop && (
         <div className="flex flex-col items-center">
           <div className="w-full flex text-center flex-col items-center">
@@ -60,3 +46,44 @@ export default function Prizes() {
     </div>
   );
 }
+
+const Decoration = () => {
+  const isDesktop = useMediaQuery("(min-width:1024px)");
+  return (
+    <>
+      <Glow
+        src={roundedflare}
+        width={isDesktop ? "650px" : "350px"}
+        height={isDesktop ? "650px" : "350px"}
+        top="90px"
+        left={isDesktop ? "50px" : "90px"}
+        // right="-290px"
+      />
+      <Glow
+        src={roundedflare}
+        width={isDesktop ? "650px" : "350px"}
+        height={isDesktop ? "650px" : "350px"}
+        bottom={isDesktop ? "-250px" : "50px"}
+        right={isDesktop ? "-390px" : "-290px"}
+      />
+      <Stars
+        src={stars.purplestarsmall}
+        left={isDesktop ? "25%" : "15%"}
+        top={isDesktop ? "27%" : "10%"}
+      />
+      {!isDesktop && (
+        <Stars src={stars.purplestarsmall} right="15%" top="20%" />
+      )}
+      <Stars
+        src={isDesktop ? stars.whitestarbig : stars.whitestarsmall}
+        right={isDesktop ? "55%" : "15%"}
+        top={isDesktop ? "35%" : "50%"}
+      />
+      <Stars
+        src={isDesktop ? stars.whitestarbig : stars.whitestarsmall}
+        right={isDesktop ? "5%" : "15%"}
+        top={isDesktop ? "45%" : "50%"}
+      />
+    </>
+  );
+};

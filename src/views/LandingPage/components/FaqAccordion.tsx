@@ -9,7 +9,7 @@ import { siteConfig } from "@/config/site";
 
 export function FaqAccordion() {
   return (
-    <div className="flex flex-col items-center lg:items-start w-full">
+    <div className="flex lg:px-[2rem] lg:mt-[5rem] flex-col items-center gap-4 lg:items-start w-full">
       <Text type="h1" text="Frequently Asked" isWhite />
       <Text type="h1" text="Questions" className="mb-3"/>
       <div>
@@ -26,7 +26,7 @@ export function FaqAccordion() {
           text=" getlinked Hackathon 1.0"
         />
       </div>
-      <br /> 
+      {/* <br />  */}
       <Accordion type="single" collapsible className="w-full">
         {siteConfig.FaQs.map(({ question, answer, value }) => {
           return (

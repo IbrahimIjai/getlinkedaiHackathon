@@ -12,6 +12,8 @@ import Image from "next/image";
 import Glow from "../../components/Glow";
 import roundedflare from "./images/roundedflare.png"
 import useMediaQuery from "@/hooks/useMediaQuery";
+import Stars from "@/components/NewStars";
+import { stars } from "@/assets/images";
 
 export default function PrivacyPolicy() {
 
@@ -19,17 +21,11 @@ export default function PrivacyPolicy() {
   const isDesktop = useMediaQuery("(min-width:1024px)");
 
   return (
-    <div className="grid items-center lg:grid-cols-2 p-[4rem] relative">
-         <Glow
-        src={roundedflare}
-        width={isDesktop ? "650px" : "300px"}
-        height={isDesktop ? "650px" : "300px"}
-        top={isDesktop ? "250px" : "350px"}
-        left={isDesktop ? "-160px" : "-50px"}
-      />
-      <div className="flex flex-col  items-center lg:items-start gap-6">
+    <div className="grid items-center py-[4rem] gap-4 lg:pt-[6rem] lg:px-[4rem] lg:grid-cols-2 relative">
+      <Decoration/>
+      <div className="flex flex-col px-[3.5rem]  items-center lg:items-start gap-6">
         <div className="flex flex-col items-center text-center lg:items-start gap-3">
-          <div>
+          <div className="flex flex-col lg:items-start">
             <Text type="h1" text="Privacy Policy and" isWhite />
             <Text type="h1" text="Terms" />
           </div>
@@ -42,6 +38,7 @@ export default function PrivacyPolicy() {
             type="p"
             text="Below are our privacy & policy, which outline a lot of goodies. its our aim to always take of our participant"
             isWhite
+            className="lg:text-start"
           />
         </div>
 
@@ -69,18 +66,48 @@ export default function PrivacyPolicy() {
           <Button variant="gradient">Read More</Button>
         </div>
       </div>
-      <div>
+      <div className="m-[2rem] flex items-center justify-center">
         <Image
-          src={privacybig}
-          className="lg:inline hidden"
-          alt="A place holder Image"
-        />
-        <Image
-          src={privacysmall}
-          className="lg:hidden"
+          src={isDesktop? privacybig :privacysmall }
+          className="max-w-[560px] max-h-[705px]"
           alt="A place holder Image"
         />
       </div>
     </div>
   );
 }
+
+const Decoration = () => {
+  const isDesktop = useMediaQuery("(min-width:1024px)");
+  return (
+    <>
+       <Glow
+        src={roundedflare}
+        width={isDesktop ? "650px" : "300px"}
+        height={isDesktop ? "650px" : "300px"}
+        top={isDesktop ? "250px" : "350px"}
+        left={isDesktop ? "-160px" : "-50px"}
+      />
+      <Stars
+        src={isDesktop ? stars.purplestarbig : stars.purplestarsmall}
+        left={isDesktop ? "2%" : "15%"}
+        bottom={isDesktop ? "15%" : "130px"}
+      />
+      <Stars
+        src={isDesktop ? stars.purplestarbig : stars.purplestarsmall}
+        left={isDesktop ? "40%" : "15%"}
+        top={isDesktop ? "15%" : "130px"}
+      />
+      <Stars
+        src={isDesktop ? stars.whitestarbig : stars.whitestarsmall}
+        right={isDesktop ? "20%" : "15%"}
+        top={isDesktop ? "45%" : "50%"}
+      />
+       <Stars
+        src={isDesktop ? stars.whitestarbig : stars.whitestarsmall}
+        right={isDesktop ? "20%" : "15%"}
+        top={isDesktop ? "45%" : "50%"}
+      />
+    </>
+  );
+};

@@ -6,9 +6,12 @@ import Text from "@/components/Text";
 import Stars from "@/components/NewStars";
 import { stars } from "@/assets/images";
 import useMediaQuery from "@/hooks/useMediaQuery";
+
+//timeline test
+
 export default function TimeLine() {
   return (
-    <section className="px-[2.5rem] lg:px-[4rem] py-[4rem] lg:py-[8rem]">
+    <section className="px-[2.5rem] lg:px-[4rem] py-[4rem] lg:py-[8rem] relative">
       <Decoration/>
       <div className="flex w-full items-center flex-col gap-2 mb-4">
         <Text type="h1" text="Timeline" isWhite />
@@ -22,6 +25,9 @@ export default function TimeLine() {
         <TimeLineItem timelineIndex={1} unixTimestamp={1679308800} />
         <TimeLineItem timelineIndex={2} unixTimestamp={1679491200} />
         <TimeLineItem timelineIndex={3} unixTimestamp={1679673600} />
+        <TimeLineItem timelineIndex={4} unixTimestamp={1679803600} />
+        <TimeLineItem timelineIndex={5} unixTimestamp={1680673600} />
+        <TimeLineItem timelineIndex={6} unixTimestamp={1680873600} />
       </div>
     </section>
   );
@@ -32,14 +38,14 @@ const Decoration = () => {
   return (
     <>
       <Stars
-        src={isDesktop ? stars.whitestarbig : stars.whitestarsmall}
-        left={isDesktop ? "90px" : "120px"}
-        top={isDesktop ? "80px" : "120px"}
+        src={isDesktop ? stars.purplestarbig : stars.purplestarsmall}
+        left={isDesktop ? "25%" : "15%"}
+        top={isDesktop ? "27%" : "130px"}
       />
       <Stars
-        src={isDesktop ? stars.graystarbig : stars.graystarsmall}
-        right={isDesktop ? "600px" : "80px"}
-        top={isDesktop ? "120px" : "130px"}
+        src={isDesktop ? stars.whitestarbig : stars.whitestarsmall}
+        right={isDesktop ? "20%" : "15%"}
+        top={isDesktop ? "45%" : "50%"}
       />
     </>
   );
