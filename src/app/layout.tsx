@@ -1,10 +1,14 @@
+"use client"
+
 import "./globals.css";
 import type { Metadata } from "next";
-import {  Montserrat } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import { Providers } from "./providers";
 const montserrat = Montserrat({ subsets: ["latin"] });
 import Navbar from "@/views/Layout/Navbar";
+import { Toaster } from "@/components/Toaster";
 import Footer from "@/views/Layout/Footer";
+
 export const metadata: Metadata = {
   title: "GetLinkedTech Hackathon 2023",
   description:
@@ -18,13 +22,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${montserrat.className} bg-background text-white overflow-x-hidden`}>
+      <body
+        className={`${montserrat.className} bg-background text-white overflow-x-hidden`}
+      >
         <Providers>
           <div className="relative flex min-h-screen flex-col">
             <Navbar />
             {children}
-            <Footer/>
-            {/* <div className="min-h-screen">d</div> */}
+            <Footer />
+            <Toaster />
           </div>
         </Providers>
       </body>

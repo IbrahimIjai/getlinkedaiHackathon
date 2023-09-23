@@ -1,3 +1,4 @@
+"use client";
 import { PreviousArrow } from "@/assets/icons";
 import SocialsLinks from "@/components/SocialLinks";
 import StarsBackground from "@/components/Stars";
@@ -6,11 +7,28 @@ import { Button } from "@/components/shadcn/Button";
 import { Input } from "@/components/shadcn/Input";
 import { Textarea } from "@/components/shadcn/Textarea";
 import Link from "next/link";
+import { useForm, SubmitHandler } from "react-hook-form";
+import ContactForm from "@/views/ContactPage/Form";
+
+type Inputs = {
+  first_name: string;
+  phone_number: string;
+  message: string;
+  email: string;
+};
 
 const InputClasses =
   "border-solid border border-white rounded px-6 py-4 text-white placeholder:text-white";
 
 export default function ContactPage() {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm<Inputs>();
+  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  // console.log(watch("Name"))
   return (
     <main className="flareBg  relative flex flex-col  ssm:items-center">
       <StarsBackground />
@@ -38,25 +56,7 @@ export default function ContactPage() {
             <SocialsLinks />
           </div>
         </aside>
-        <aside className="flex flex-col gap-6 md:flex-1 shadow-[0px_4px_4px_#00000040] p-8 rounded-xl">
-          <div className="flex flex-col">
-            <Text text="Questions or need assistance?" type="h3" />
-            <Text text="Let us know about it!" type="h3" />
-          </div>
-          <Text
-            text="Email us below to any question related to our event"
-            isWhite
-          />
-          <Input
-            placeholder="Team's Name"
-            type="text"
-            className={InputClasses}
-          />
-          <Input placeholder="Topic" type="text" className={InputClasses} />
-          <Input placeholder="Email" type="email" className={InputClasses} />
-          <Textarea placeholder="Message" className={InputClasses} />
-          <Button variant="gradient" className="m-auto">Submit</Button>
-        </aside>
+        <ContactForm/>
         <aside className="flex flex-col items-center md:hidden">
           <Text text="Share on" />
           <SocialsLinks />
