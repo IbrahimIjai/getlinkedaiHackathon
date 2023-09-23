@@ -13,8 +13,10 @@ import {
   SheetClose,
 } from "@/components/shadcn/Drawer";
 import { Close, Menu } from "@/assets/icons";
+import { useRouter } from 'next/navigation'
 
 export function MobileNav() {
+  const router = useRouter()
   const segment = useSelectedLayoutSegment();
   const [isOpen, setIsOpen] = React.useState(false);
 
@@ -39,8 +41,8 @@ export function MobileNav() {
               </Link>
             );
           })}
-          <Button variant="gradient">
-            <Link href="/register">Register</Link>
+          <Button variant="gradient" onClick={() => router.push('/register')}>
+           Register
           </Button>
         </div>
       </SheetContent>

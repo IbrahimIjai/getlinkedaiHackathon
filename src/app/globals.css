@@ -80,3 +80,9 @@
   font-weight: 700;
   font-style: normal;
 }
+
+html {
+	--scroll-behavior: smooth  !important;
+	scroll-behavior: smooth  !important;
+	transition-duration: 2s;
+	}

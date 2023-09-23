@@ -63,7 +63,7 @@ export const siteConfig = {
   Navigations: [
     {
       title: "Timeline",
-      href: "/timeline",
+      href: "#timeline",
       //   items: [
       //   ],
     },
@@ -73,7 +73,7 @@ export const siteConfig = {
     },
     {
       title: "FAQs",
-      href: "/faq",
+      href: "/#faqs",
     },
     {
       title: "Contact",
