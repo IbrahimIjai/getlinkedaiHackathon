@@ -10,7 +10,7 @@ import PrivacyPolicy from "@/views/LandingPage/PrivacyPolicy";
 
 export default function HomePage() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <HeroPage />
       <Introduction />
       <Rules />
